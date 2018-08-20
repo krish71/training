@@ -1,0 +1,135 @@
+1)what is dependency injection --> way of creating object without using new keyword
+
+what is bean autowiring --> @Autowired annotation used to implement dependency injection
+
+which implementation of appln context gives us control to shut down controller --> ConfigurableApplicationContext
+
+injecting the values using setter or constructor injection -code -->
+
+<bean id="obj" class="com.javatpoint.Employee">  
+<property name="id">  
+<value>20</value>  
+</property>  
+<property name="name">  
+<value>Arun</value>  
+</property>  
+<property name="city">  
+<value>ghaziabad</value>  
+</property>    
+</bean>
+
+<bean id="e" class="com.javatpoint.Employee">  
+<constructor-arg value="10" type="int"></constructor-arg>  
+</bean>
+
+
+
+which of the following annotation are used for lifecycle of spring --> @PostContruct and @PreDestroy
+
+in xpring appln context the singleton beans are by default lazy or eager --> Eager
+
+what is dispatcher servlet--> Front controller in Spring
+
+what is the role of context loader listener --> It creates and start application context
+
+which of the following is correct for resolving view resolver-code --> to return the view to the controller
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+does hubernate support dependency injection --> No
+
+instantiating session in hibernate including session factory-default location of hibenrate cfg.xml --> CLASSPATH
+
+which state of obj ensures synchronization of DB -ans--> persistent state
+
+whch of the foollowing converts transient to persistent --> SAVE()
+
+the jsp lifecycle method --> jspinit() _jspservice() jspdestroy()
+
+whixh of the following directive used for import jsp --> page directive, include directive and taglib directive
+
+which of the following is not jsp implicit obj --> request response out session application config page pageContext Exception
+
+difference between get parameter and get atrribute method --> getParameter - Is used for getting the information you need from the Client's HTML page 
+
+getAtribute - This is used for getting the parameters set previously in another or the same JSP or Servlet page. Basically, if you are forwarding or just going from one jsp/servlet to another one, there is no way to have the information you want unless you choose to put them in an Object and use the setAttribute to store in a Session variable. 
+
+which of the following is not a directive in jsp --> These are directives <%@page%> <%@include%> <%@taglib%> 
+
+which of the following container service allows to lookup for resources -->
+
+which of the following correct annotation for composite key in hibernate --> @Embedded
+
+how many fetch strategies suported in hibernate --> fetch="join" fetch="select" fetch="size" fetch="subset"
+
+which staragey fires only single query to get parent and child record --> fetchType.Eager
+
+which xml attribute is  responsible to save update and delete parent child db --> Cascade
+
+graph in DB-anwers-> Cascade
+
+which if the following is the default loader for child element in hiberante --> Lazy=true
+
+from hibernate cfg -what is the role of dialaect in this code-code --> to know which database you are using
+<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+the correct code snippet for specifiyng the mapping entries in cfg file --> <mapping resource="mappings/customer.hbm.xml" />
+
+at what tym the servlet init mehtod is called --> The init() method is typically used to perform servlet initialization--creating or loading objects that are used by the servlet in the handling of its requests
+
+all the possble ways of redirecting servlet and servlet page in jsp --> forward and redirect
+
+what type of object to read initialization param x.___() -->
+
+different scopes in servlet and jsp --> page, request, session, application
+
+spring config can be written in -select all that apply -->
+
+which of the following is not a stereotype of component --> @Bean
+
+which of the follwoing annotation makes the transzaction aware -->
+
+which of the follwoing is false aboput lazy loading -->
+
+which of the following is directive entry for making an error page --> isErrorPage
+
+servlet is the child of --> _______HttpServlet_______
+
+which of the follliwng the correct annotation  for servlet --> 
+
+which http method ends session --> invalidate()
+
+read a code snippet identify -native sql or HQL-code --> Hql starts from "From tableName" and SQL is normal sql query
+
+which of the following is the correct annotation for request mapping in spring annotation --> @RequestMapping
+
+what autowire annotation does -->@Autowired annotation used to implement dependency injection
+
+which of the following are mandatory annotation for hibernate entity --> @Entity and @Id
+ 
+which of the following is correct syntax for importing external javascript --> <script type="text/javascript" src="<c:url value='js/index.js'/>"></script>
+-
+code snippet -without closing title tag -code --> runs but rest everything is displayed in the title 
+
+where AND fucntion IN JAVASCRIPT ARE --> 
+
+which of the following loop manages the cursor implicitly --> FOR
+
+which of the following parameter type acts as a constant --> 
+
+query with nested group function-is a valid sql query-code --> 
+
+which of the following statement helps in invoking databse stored precdeure in jdbc --> Callable
+
+join query code snippet ,identifiy the type of join -code -->
+
+code snippet on cursor-try to print rowcount before fetch nad after fetch -code --> 
+
+which of the folowing is the synchronized collection --> synchronizedMap synchronizedList
+
+what can be done for sorting custom ojbect in a treeset --> Comparator, Comparable
+ 
+
