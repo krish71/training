@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SpringMVC</display-name>
+  <!-- It's always recommended when using Spring MVC, that
+		those beans which form the business layer of our 
+		application should be loaded in a separate Context.
+		That's the role of this ContextLoaderListener.
+		By default it will search for the beans in an xml file
+		by the name /WEB-INF/applicationContext.xml. To provide
+		alternative configuration filename(s), we need to set
+		a context-param like this:
+		<context-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config1.xml, ....</param-value>
+		</context-param>
+		-->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<!-- This is the one who will play the role of Front Controller
+		in Spring MVC. By default it will read the configuration
+		from a file by the name /WEB-INF/<servlet-name>-servlet.xml
+		To manually specify the configuration filename(s), we need
+		to set an init-param like this:
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config1.xml, ....</param-value>	
+		</init-param>
+		
+		A WebApplicationContext instance will be created by this
+		DispatcherServlet for managing the mvc components and it's
+		dependencies
+	 -->
+	<servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/controller/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
