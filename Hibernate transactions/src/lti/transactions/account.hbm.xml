@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="lti.transactions">
+<class name="Account" table="account_1">
+		<id name="accountNo" column="accountnumber" type="int">
+			
+		</id>
+
+		<discriminator column="transaction_type" type="string" />
+
+		<property name="name" />
+		<property name="initBalance" column="initial_balance" />
+
+		<subclass name="Deposit" discriminator-value="Cr">
+			<property name="dId" column="deposit_id" />
+			<property name="amount" column="amount" />
+			<property name="balance" column="balance" />
+		</subclass>
+
+		<subclass name="Withdraw" discriminator-value="Db">
+			<property name="wId" column="withdrawal_id" />
+		</subclass>
+
+	</class>
+
+</hibernate-mapping>
